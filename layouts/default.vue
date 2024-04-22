@@ -7,7 +7,7 @@
       <div class="fixed z-40 w-full mt-10 flex justify-end px-16">
         <ContactUsButton variant="outline" class="w-fit" />
       </div>
-      <div class="bg-[#F6F6F9] overflow-y-auto">
+      <div class="overflow-y-auto">
         <slot />
       </div>
     </div>
