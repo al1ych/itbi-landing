@@ -1,12 +1,12 @@
 <template>
   <swiper
-    :slidesPerView="3"
+    :slidesPerView="5"
     :spaceBetween="30"
     :loop="true"
     :pagination="{
       clickable: true,
     }"
-    :navigation="true"
+    :navigation="false"
     :modules="modules"
     class="mySwiper"
     :mousewheel="true"
