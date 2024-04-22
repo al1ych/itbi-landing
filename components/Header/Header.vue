@@ -1,8 +1,8 @@
 <template>
   <div class="flex justify-between items-center w-full">
     <div class="flex items-center">
-      <Logo></Logo>
-      <NavBar></NavBar>
+      <HeaderLogo></HeaderLogo>
+      <HeaderNavBar></HeaderNavBar>
     </div>
   </div>
 </template>

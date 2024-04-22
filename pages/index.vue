@@ -19,13 +19,17 @@ import ContactUsButton from '../components/ContactUsButton.vue';
         </div>
 
         <div class="w-[40%] mr-24">
-          <img src="/illustrations/squiggle.svg" alt="squiggle" class="mt-40" />
+          <img
+            src="/illustrations/squiggle.svg"
+            alt="squiggle"
+            class="mt-40 pointer-events-none select-none"
+          />
         </div>
       </div>
 
       <div class="w-full flex flex-col justify-center items-center mt-24">
         <h1 class="text-xl">Технологии</h1>
-        <TechnologyCarousel class="mt-8" />
+        <TechCarousel class="mt-8" />
       </div>
     </section>
 
