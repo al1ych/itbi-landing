@@ -13,10 +13,11 @@
     }"
     :effect="'coverflow'"
     :coverflowEffect="{
-      stretch: 100,
-      depth: 100,
-      modifier: 0.5,
-      slideShadows: false,
+      rotate: 0,
+      stretch: 5,
+      depth: 1000,
+      modifier: 0.2,
+      slideShadows: true,
     }"
   >
     <swiper-slide
@@ -105,10 +106,23 @@
   .swiper {
     width: 100%;
     height: 100%;
+
+    animation: staggerIn 0.3s forwards 0s ease-out;
+  }
+
+  @keyframes staggerIn {
+    from {
+      opacity: 0;
+      transform: translate(0, 1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
 
   .swiper-slide {
-    transition: all 0.3s;
+    transition: opacity 0.3s;
     opacity: 0;
 
     text-align: center;
@@ -122,9 +136,9 @@
   .swiper-slide-visible {
     opacity: 1;
 
-    & > .techCard {
-      box-shadow: 0px 1rem 100rem rgba(0, 0, 0, 0.25);
-    }
+    /* &:first-child > .techCard {
+      box-shadow: 0px 1rem 10rem rgba(220, 201, 255, 1);
+    } */
   }
 
   .swiper-slide img {
