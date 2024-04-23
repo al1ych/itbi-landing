@@ -28,7 +28,7 @@ import ContactUsButton from '../components/ContactUsButton.vue';
       </div>
 
       <div class="w-full flex flex-col justify-center items-center mt-24">
-        <h1 class="text-xl">Технологии</h1>
+        <h1 class="text-xl z-20">Технологии</h1>
         <TechCarousel class="mt-8 mb-64" />
       </div>
 

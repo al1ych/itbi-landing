@@ -1,11 +1,9 @@
 <template>
   <swiper
+    :grabCursor="true"
     :slidesPerView="5"
-    :spaceBetween="30"
+    :centeredSlides="true"
     :loop="true"
-    :pagination="{
-      clickable: true,
-    }"
     :navigation="false"
     :modules="modules"
     class="mySwiper"
@@ -13,14 +11,56 @@
     :autoplay="{
       delay: 5000,
     }"
+    :effect="'coverflow'"
+    :coverflowEffect="{
+      stretch: 100,
+      depth: 100,
+      modifier: 0.5,
+      slideShadows: false,
+    }"
   >
-    <swiper-slide><TechCard /></swiper-slide>
-    <swiper-slide><TechCard /></swiper-slide>
-    <swiper-slide><TechCard /></swiper-slide>
-    <swiper-slide><TechCard /></swiper-slide>
-    <swiper-slide><TechCard /></swiper-slide>
-    <swiper-slide><TechCard /></swiper-slide>
-    <swiper-slide><TechCard /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1C: Бухгалтерия 8"
+        subtitle="Запись в реестре №76 от 20.02.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1C: Бухгалтерия 8"
+        subtitle="Запись в реестре №76 от 20.02.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1C: Бухгалтерия 8"
+        subtitle="Запись в реестре №76 от 20.02.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1C: Бухгалтерия 8"
+        subtitle="Запись в реестре №76 от 20.02.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1C: Бухгалтерия 8"
+        subtitle="Запись в реестре №76 от 20.02.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1C: Бухгалтерия 8"
+        subtitle="Запись в реестре №76 от 20.02.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1C: Бухгалтерия 8"
+        subtitle="Запись в реестре №76 от 20.02.2016"
+        link="google.com"
+    /></swiper-slide>
   </swiper>
 </template>
 <script>
@@ -34,7 +74,13 @@
   import "swiper/css/navigation"
 
   // import required modules
-  import { Pagination, Navigation, Autoplay, Mousewheel } from "swiper/modules"
+  import {
+    Pagination,
+    Navigation,
+    Autoplay,
+    Mousewheel,
+    EffectCoverflow,
+  } from "swiper/modules"
 
   export default {
     components: {
@@ -43,7 +89,13 @@
     },
     setup() {
       return {
-        modules: [Pagination, Navigation, Autoplay, Mousewheel],
+        modules: [
+          Pagination,
+          Navigation,
+          Autoplay,
+          Mousewheel,
+          EffectCoverflow,
+        ],
       }
     },
   }
@@ -56,14 +108,23 @@
   }
 
   .swiper-slide {
+    transition: all 0.3s;
+    opacity: 0;
+
     text-align: center;
     font-size: 18px;
-    background: #3f3f3f;
 
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .swiper-slide-visible {
+    opacity: 1;
+
+    & > .techCard {
+      box-shadow: 0px 1rem 100rem rgba(0, 0, 0, 0.25);
+    }
   }
 
   .swiper-slide img {
