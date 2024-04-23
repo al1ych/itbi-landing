@@ -1,7 +1,7 @@
 import ContactUsButton from '../components/ContactUsButton.vue';
 <template>
-  <body class="text-white font-thin bg-itbtPurple-700">
-    <section class="w-full relative bg-[#fcfaff]" name="main">
+  <body class="font-thin bg-itbtPurple-700">
+    <section class="text-white w-full relative bg-[#fcfaff]" name="main">
       <div class="flex justify-between w-full relative z-20">
         <div class="mx-52 mt-48 w-[50%]">
           <h1 class="text-white text-6xl font-bold">

@@ -2,7 +2,6 @@
   <swiper
     :grabCursor="true"
     :slidesPerView="5"
-    :centeredSlides="true"
     :loop="true"
     :navigation="false"
     :modules="modules"
@@ -22,8 +21,14 @@
   >
     <swiper-slide
       ><TechCard
-        title="1C: Бухгалтерия 8"
-        subtitle="Запись в реестре №76 от 20.02.2016"
+        title="1С: Управление торговлей 8"
+        subtitle="Запись в реестре №169 от 18.03.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1С: Документооборот 8"
+        subtitle="Запись в реестре №285 от 02.04.2016"
         link="google.com"
     /></swiper-slide>
     <swiper-slide
@@ -34,8 +39,26 @@
     /></swiper-slide>
     <swiper-slide
       ><TechCard
-        title="1C: Бухгалтерия 8"
-        subtitle="Запись в реестре №76 от 20.02.2016"
+        title="1C: Управление холдингом 8"
+        subtitle="Запись в реестре №553 от 29.04.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1C:ERP Управление предприятием 8"
+        subtitle="Запись в реестре №72 от 20.02.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1С: Управление торговлей 8"
+        subtitle="Запись в реестре №169 от 18.03.2016"
+        link="google.com"
+    /></swiper-slide>
+    <swiper-slide
+      ><TechCard
+        title="1С: Документооборот 8"
+        subtitle="Запись в реестре №285 от 02.04.2016"
         link="google.com"
     /></swiper-slide>
     <swiper-slide
@@ -46,24 +69,19 @@
     /></swiper-slide>
     <swiper-slide
       ><TechCard
-        title="1C: Бухгалтерия 8"
-        subtitle="Запись в реестре №76 от 20.02.2016"
+        title="1C: Управление холдингом 8"
+        subtitle="Запись в реестре №553 от 29.04.2016"
         link="google.com"
     /></swiper-slide>
     <swiper-slide
       ><TechCard
-        title="1C: Бухгалтерия 8"
-        subtitle="Запись в реестре №76 от 20.02.2016"
-        link="google.com"
-    /></swiper-slide>
-    <swiper-slide
-      ><TechCard
-        title="1C: Бухгалтерия 8"
-        subtitle="Запись в реестре №76 от 20.02.2016"
+        title="1C:ERP Управление предприятием 8"
+        subtitle="Запись в реестре №72 от 20.02.2016"
         link="google.com"
     /></swiper-slide>
   </swiper>
 </template>
+
 <script>
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from "swiper/vue"
@@ -122,7 +140,7 @@
   }
 
   .swiper-slide {
-    transition: opacity 0.3s;
+    transition: opacity 0.5s;
     opacity: 0;
 
     text-align: center;
@@ -135,10 +153,6 @@
 
   .swiper-slide-visible {
     opacity: 1;
-
-    /* &:first-child > .techCard {
-      box-shadow: 0px 1rem 10rem rgba(220, 201, 255, 1);
-    } */
   }
 
   .swiper-slide img {
