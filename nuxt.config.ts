@@ -8,7 +8,19 @@ export default defineNuxtConfig({
     preference: "light",
   },
 
-  modules: ["@nuxt/ui"],
+  modules: [
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: ["defineStore", "acceptHMRUpdate"],
+      },
+    ],
+    "@nuxt/ui",
+  ],
+
+  imports: {
+    dirs: ["stores"],
+  },
 
   tailwindcss: {
     config: {

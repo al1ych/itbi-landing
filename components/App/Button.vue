@@ -1,14 +1,14 @@
 <script lang="js" setup>
   // props
-  defineProps(['variant']);
+  defineProps(['variant', 'text']);
 </script>
 
 <template>
   <UButton
     :variant="variant"
-    class="h-10 px-8 text-white hover:bg-white hover:text-black group"
+    class="h-10 px-8 text-white hover:bg-white hover:text-black hover:border-[1px] hover:border-black group"
   >
-    <span>Связаться</span>
+    <span>{{ text || "Связаться" }}</span>
     <svg
       viewBox="0 0 16 16"
       fill="none"

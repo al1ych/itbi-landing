@@ -13,7 +13,7 @@
           автоматизации ключевых бизнес-процессов
         </h2>
 
-        <ContactUsButton variant="solid" class="mt-10" />
+        <AppButton variant="solid" class="mt-10" />
       </div>
 
       <div class="w-[40%] mr-48 mt-8">
