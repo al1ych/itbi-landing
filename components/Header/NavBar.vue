@@ -26,7 +26,7 @@
 <template>
   <UHorizontalNavigation
     :links="links"
-    class="h-10 bg-white rounded-full px-4 w-fit"
+    class="h-10 bg-white rounded-full px-4 w-fit border-[1px] border-itbtPurple-700"
   >
     <template #default="{ link }">
       <span class="group-hover:text-primary relative">{{ link.label }}</span>

@@ -15,7 +15,7 @@
       rotate: 0,
       stretch: 5,
       depth: 1000,
-      modifier: 0.2,
+      modifier: 0.21,
       slideShadows: true,
     }"
   >

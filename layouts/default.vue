@@ -1,9 +1,6 @@
 <template>
   <div class="font-['Inter var']">
-    <div
-      class="fixed w-full h-24 z-[100] bg-itbtPurple-700 backdrop-filter backdrop-blur-md bg-opacity-70 rounded-b-[20px]"
-      name="backdrop"
-    ></div>
+    <div class="fixed w-full h-24 z-[100]" name="backdrop"></div>
 
     <div class="flex flex-col w-full pt-7">
       <div class="fixed z-[150] ml-16">
