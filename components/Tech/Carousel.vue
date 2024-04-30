@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO скорость переключения -->
   <swiper
     :grabCursor="true"
     :slidesPerView="5"
@@ -8,8 +9,9 @@
     class="mySwiper"
     :mousewheel="true"
     :autoplay="{
-      delay: 5000,
+      delay: 3000,
     }"
+    speed="900"
     :effect="'coverflow'"
     :coverflowEffect="{
       rotate: 100,

@@ -7,13 +7,17 @@
           1С и Битриксе
         </h1>
 
-        <h2 class="text-[#EEE6FF] text-xl font-thin mt-8">
+        <h2 class="text-[#EEE6FF] text-xl font-thin mt-4">
           Мы специализируемся на разработке и внедрении<br />
           систем ERP, CRM, ECM, а также биллинговых систем для<br />
           автоматизации ключевых бизнес-процессов
         </h2>
 
-        <AppButton variant="solid" class="mt-10 w-48" />
+        <AppButton
+          variant="outline"
+          class="mt-10 w-64"
+          text="Оставить заявку"
+        />
       </div>
 
       <div class="w-[40%] mr-48 mt-8">

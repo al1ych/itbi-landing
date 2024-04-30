@@ -54,5 +54,10 @@ export const useProjectStore = defineStore("project-store", () => {
     },
   ])
 
-  return { projects }
+  // get by id
+  const getProjectById = (id: number) => {
+    return projects.value[id]
+  }
+
+  return { projects, getProjectById }
 })

@@ -11,6 +11,7 @@
 </script>
 
 <template>
+  <!-- TODO: футер вынести в Апп!!! -->
   <footer class="flex items-center justify-between w-full h-full">
     <div class="flex flex-col gap-2">
       <p class="font-normal">E-mail</p>
