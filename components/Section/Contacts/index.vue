@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full h-screen -mt-24 text-black bg-offwhite">
+  <section id="contacts" class="w-full h-screen -mt-24 text-black bg-offwhite">
     <div class="flex items-center justify-between h-full">
       <!-- left section -->
       <div

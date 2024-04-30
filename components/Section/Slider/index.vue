@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
   const props = defineProps(["initSectionIndex", "isScroll"])
 
   const sectionMeta = [
@@ -22,20 +22,56 @@
     },
   ]
 
-  const currentSectionIndex = ref<number>(props.initSectionIndex)
+  const currentSectionIndex = ref(props.initSectionIndex)
 
+  function decCurrentSectionIndex() {
+    currentSectionIndex.value =
+      (currentSectionIndex.value + sectionMeta.length - 1) % sectionMeta.length
+  }
+
+  function incCurrentSectionIndex() {
+    currentSectionIndex.value =
+      (currentSectionIndex.value + 1) % sectionMeta.length
+  }
+
+  let interval = null
   onMounted(() => {
     if (props.isScroll) {
-      setInterval(() => {
-        currentSectionIndex.value = (currentSectionIndex.value + 1) % 3
-      }, 3000)
+      interval = setInterval(() => incCurrentSectionIndex, 5000)
     }
   })
+
+  function handleRight() {
+    incCurrentSectionIndex()
+    clearInterval(interval)
+  }
+
+  function handleLeft() {
+    decCurrentSectionIndex()
+    clearInterval(interval)
+  }
 </script>
 
 <template>
+  <!-- controls -->
+  <div
+    class="absolute w-full h-[140vh] flex items-center justify-between z-30 px-12"
+  >
+    <img
+      src="/icons/Flecha-derecha.svg"
+      class="rotate-180 h-12 cursor-pointer hover:animate-pulse"
+      @click="handleLeft"
+    />
+    <img
+      src="/icons/Flecha-derecha.svg"
+      class="h-12 cursor-pointer hover:animate-pulse"
+      @click="handleRight"
+    />
+  </div>
+
   <!-- content -->
   <section
+    id="multisection"
     class="absolute z-20 flex items-center justify-between w-full h-[120vh] px-48 text-offwhite"
   >
     <div class="flex flex-col w-1/2 h-[33%] justify-between">

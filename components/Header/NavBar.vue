@@ -6,19 +6,19 @@
     },
     {
       label: "Специализация",
-      to: "/specialization",
+      to: "/#multisection",
     },
     {
       label: "О компании",
-      to: "/about",
+      to: "/#multisection",
     },
     {
       label: "История",
-      to: "/history",
+      to: "/#multisection",
     },
     {
       label: "Контакты",
-      to: "/contacts",
+      to: "/#contacts",
     },
   ]
 </script>
@@ -27,6 +27,11 @@
   <UHorizontalNavigation
     :links="links"
     class="h-10 bg-white rounded-full px-4 w-fit border-[1px] border-itbtPurple-700"
+    :ui="{
+      strategy: 'override',
+      active: 'text-itbtPurple-500 bg-transparent -mt-1',
+      inactive: 'text-itbtPurple-500 bg-transparent -mt-1',
+    }"
   >
     <template #default="{ link }">
       <span class="group-hover:text-primary relative font-light px-1">
@@ -35,3 +40,9 @@
     </template>
   </UHorizontalNavigation>
 </template>
+
+<style>
+  :root {
+    scroll-behavior: smooth;
+  }
+</style>

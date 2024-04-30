@@ -7,7 +7,7 @@
   <UButton
     :variant="variant"
     class="h-10 px-8 text-white hover:bg-white hover:text-black hover:border-[1px] hover:border-black group flex items-center justify-center"
-    :to="to || '/'"
+    :to="to || '/#contacts'"
     @click="onClick"
   >
     <span class="font-light">{{ text || "Связаться" }}</span>
