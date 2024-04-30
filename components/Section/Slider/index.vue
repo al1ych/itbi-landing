@@ -35,10 +35,11 @@
 </script>
 
 <template>
+  <!-- content -->
   <section
-    class="absolute z-20 flex items-center justify-between w-full h-full px-48 text-offwhite"
+    class="absolute z-20 flex items-center justify-between w-full h-[120vh] px-48 text-offwhite"
   >
-    <div class="flex flex-col w-1/2 h-[40%] justify-between">
+    <div class="flex flex-col w-1/2 h-[33%] justify-between">
       <div>
         <h2 class="text-5xl font-bold">
           {{ sectionMeta[currentSectionIndex].title }}
@@ -51,11 +52,12 @@
       <SectionSliderPbar :step="currentSectionIndex" />
     </div>
 
-    <div>
+    <div class="w-[30%]">
       <SectionSliderIllustrationSelector :step="currentSectionIndex" />
     </div>
   </section>
 
+  <!-- background -->
   <div class="relative z-10 w-full h-full">
     <svg
       class="left-0 mx-0 -m-10 pointer-events-none select-none"
