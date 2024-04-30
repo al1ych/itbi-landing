@@ -66,6 +66,7 @@
         ry="291.5"
         transform="rotate(5.25071 802.854 374.114)"
         :fill="sectionMeta[currentSectionIndex].background"
+        class="transition"
       />
       <ellipse
         cx="724"
@@ -73,12 +74,14 @@
         rx="1076"
         ry="330.5"
         :fill="sectionMeta[currentSectionIndex].background"
+        class="transition"
       />
       <rect
         y="228"
         width="1451"
         height="728"
         :fill="sectionMeta[currentSectionIndex].background"
+        class="transition"
       />
     </svg>
   </div>
