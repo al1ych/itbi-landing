@@ -1,6 +1,6 @@
 import ContactUsButton from '../components/ContactUsButton.vue';
 <template>
-  <body class="font-thin bg-itbtPurple-700">
+  <body class="font-thin bg-offwhite">
     <SectionMain />
     <SectionProjects />
     <SectionSlider initSectionIndex="0" isScroll="true" />
