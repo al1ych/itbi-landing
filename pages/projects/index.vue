@@ -10,11 +10,14 @@ import ContactUsButton from '../components/ContactUsButton.vue';
     />
 
     <div class="relative">
-      <img
-        src="/backgrounds/cutout-ellipse.svg"
-        alt="bg"
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
         class="w-full absolute z-10 -mt-24 h-[30rem] pointer-events-none select-none"
-      />
+      >
+        <ellipse cx="823" cy="244" rx="823" ry="244" fill="#FCFAFF" />
+        <!-- rectangle from 0 0 to halft of ellipse -->
+        <rect x="0" y="0" width="823" height="488" fill="#FCFAFF" />
+      </svg>
 
       <SectionContacts class="mt-48 absolute" />
     </div>
