@@ -10,7 +10,7 @@
     :to="to || '/'"
     @click="onClick"
   >
-    <span class="font-thin">{{ text || "Связаться" }}</span>
+    <span class="font-light">{{ text || "Связаться" }}</span>
     <svg
       viewBox="0 0 16 16"
       fill="none"
