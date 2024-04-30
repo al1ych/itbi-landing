@@ -37,7 +37,9 @@
   let interval = null
   onMounted(() => {
     if (props.isScroll) {
-      interval = setInterval(() => incCurrentSectionIndex, 5000)
+      interval = setInterval(() => {
+        incCurrentSectionIndex()
+      }, 5000)
     }
   })
 

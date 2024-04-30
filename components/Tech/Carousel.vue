@@ -14,7 +14,7 @@
     :coverflowEffect="{
       rotate: 100,
       stretch: 0,
-      depth: 1000,
+      depth: 800,
       modifier: 0.2,
       slideShadows: true,
     }"
