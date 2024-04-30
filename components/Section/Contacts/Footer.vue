@@ -34,10 +34,13 @@
 
     <div class="flex gap-4">
       <NuxtLink :to="waTo">
-        <img src="/icons/socials/whatsapp.svg" class="hover:opacity-50" />
+        <img
+          src="/icons/socials/whatsapp.svg"
+          class="hover:opacity-50 transition"
+        />
       </NuxtLink>
       <NuxtLink :to="tgTo">
-        <img src="/icons/socials/tg.svg" class="hover:opacity-50" />
+        <img src="/icons/socials/tg.svg" class="hover:opacity-50 transition" />
       </NuxtLink>
     </div>
   </footer>
