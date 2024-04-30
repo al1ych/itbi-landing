@@ -2,7 +2,7 @@
   const links = [
     {
       label: "Проекты",
-      to: "/projects",
+      to: "/#projects",
     },
     {
       label: "Специализация",
