@@ -13,7 +13,7 @@
           автоматизации ключевых бизнес-процессов
         </h2>
 
-        <AppButton variant="solid" class="mt-10 w-48" />
+        <AppButton variant="outline" class="mt-10 w-48" />
       </div>
 
       <div class="w-[40%] mr-48 mt-8">

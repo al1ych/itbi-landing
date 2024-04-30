@@ -7,7 +7,7 @@
         <Header />
       </div>
       <div class="fixed z-[140] w-full flex justify-end px-16">
-        <AppButton variant="outline" class="w-fit" />
+        <AppButton variant="solid" class="w-fit rounded-full border-[1px]" />
       </div>
       <div class="">
         <slot />
