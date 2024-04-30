@@ -1,5 +1,5 @@
 <template>
-  <section class="text-white w-full relative bg-[#fcfaff]" name="main">
+  <section class="text-white w-full relative bg-offwhite" name="main">
     <div class="flex justify-between w-full relative z-20">
       <div class="mx-52 mt-48 w-[50%]">
         <h1 class="text-white text-6xl font-bold">

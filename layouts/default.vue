@@ -1,5 +1,5 @@
 <template>
-  <div class="font-['Inter var']">
+  <div class="font-['Inter var'] bg-itbtPurple-700">
     <div class="fixed w-full h-24 z-[100]" name="backdrop"></div>
 
     <div class="flex flex-col w-full pt-7">

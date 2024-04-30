@@ -4,11 +4,11 @@
 </script>
 
 <template>
-  <section class="bg-[#fcfaff] w-full h-[3000px] -z-20" name="projects">
+  <section class="bg-offwhite w-full -z-20" name="projects">
     <div
       class="flex justify-between w-full flex flex-col justify-center items-center"
     >
-      <div class="mx-40 mt-48 text-black flex flex-col items-center">
+      <div class="mx-40 mt-48 pb-24 text-black flex flex-col items-center">
         <h1 class="text-5xl font-bold z-50">Проекты</h1>
 
         <div class="w-full flex gap-10 mt-40">

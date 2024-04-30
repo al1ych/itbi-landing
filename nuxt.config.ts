@@ -28,6 +28,7 @@ export default defineNuxtConfig({
         extend: {
           colors: {
             white: "#ffffff",
+            offwhite: "#fcfaff",
 
             itbtPurple: {
               50: "#f2f0ff",
