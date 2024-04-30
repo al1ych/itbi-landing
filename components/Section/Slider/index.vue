@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const props = defineProps(["initSectionIndex"])
+  const props = defineProps(["initSectionIndex", "isScroll"])
 
   const sectionMeta = [
     {
@@ -25,16 +25,18 @@
   const currentSectionIndex = ref<number>(props.initSectionIndex)
 
   onMounted(() => {
-    setInterval(() => {
-      console.log("Hello world", currentSectionIndex.value)
-      currentSectionIndex.value = (currentSectionIndex.value + 1) % 3
-    }, 1000)
+    if (props.isScroll) {
+      setInterval(() => {
+        console.log("Hello world", currentSectionIndex.value)
+        currentSectionIndex.value = (currentSectionIndex.value + 1) % 3
+      }, 3000)
+    }
   })
 </script>
 
 <template>
-  <div
-    class="absolute flex items-center justify-between w-full h-full px-48 text-offwhite"
+  <section
+    class="absolute z-20 flex items-center justify-between w-full h-full px-48 text-offwhite"
   >
     <div class="flex flex-col w-1/2 h-[40%] justify-between">
       <div>
@@ -49,12 +51,14 @@
       <SectionSliderPbar :step="currentSectionIndex" />
     </div>
 
-    <div><SectionSliderIllustrationSelector :step="currentSectionIndex" /></div>
-  </div>
+    <div>
+      <SectionSliderIllustrationSelector :step="currentSectionIndex" />
+    </div>
+  </section>
 
-  <div class="w-full h-full bg-offwhite">
+  <div class="relative z-10 w-full h-full">
     <svg
-      class="left-0 z-0 mx-0 -m-10 pointer-events-none select-none"
+      class="left-0 mx-0 -m-10 pointer-events-none select-none"
       viewBox="0 0 1440 1059"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
