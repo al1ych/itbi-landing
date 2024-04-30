@@ -1,13 +1,14 @@
 <script lang="js" setup>
   // props
-  defineProps(['variant', 'text', 'to']);
+  defineProps(['variant', 'text', 'to', 'onClick']);
 </script>
 
 <template>
   <UButton
     :variant="variant"
-    class="h-10 px-8 text-white hover:bg-white hover:text-black hover:border-[1px] hover:border-black group"
+    class="h-10 px-8 text-white hover:bg-white hover:text-black hover:border-[1px] hover:border-black group flex items-center justify-center"
     :to="to || '/'"
+    @click="onClick"
   >
     <span>{{ text || "Связаться" }}</span>
     <svg

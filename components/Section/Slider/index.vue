@@ -27,7 +27,6 @@
   onMounted(() => {
     if (props.isScroll) {
       setInterval(() => {
-        console.log("Hello world", currentSectionIndex.value)
         currentSectionIndex.value = (currentSectionIndex.value + 1) % 3
       }, 3000)
     }

@@ -1,10 +1,23 @@
 <template>
   <section class="w-full h-screen -mt-24 text-black bg-offwhite">
     <div class="flex items-center justify-between h-full">
-      <div class="w-[60%]">
-        <img class="w-[400px] ml-64 mt-32" src="/backgrounds/form-mockup.svg" />
+      <!-- left section -->
+      <div
+        class="relative w-[60%] h-full flex flex-col justify-center items-center"
+      >
+        <h3 class="text-5xl font-bold mb-4">Связаться с нами</h3>
+        <h4 class="text-xl font-thin mb-8">
+          В течение 2 часов мы с вами свяжемся
+        </h4>
+
+        <SectionContactsForm class="w-1/2" />
+
+        <div class="absolute bottom-24 w-1/2 px-1">
+          <SectionContactsFooter />
+        </div>
       </div>
 
+      <!-- right section -->
       <div class="w-[40%] h-full">
         <iframe
           class="w-full h-full grayscale"
