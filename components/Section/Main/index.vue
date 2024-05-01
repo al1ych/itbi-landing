@@ -27,7 +27,7 @@
           />
         </div>
 
-        <div class="flex-1 max-w-[450px] rotate-[40deg] lg:rotate-0">
+        <div class="flex-1 max-w-[450px] rotate-[40deg] lg:rotate-0 px-12">
           <img
             src="/illustrations/squiggle.svg"
             alt="squiggle"
