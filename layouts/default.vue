@@ -9,7 +9,7 @@
       <div class="fixed z-[140] w-full flex justify-end px-16">
         <AppButton variant="solid" class="w-fit rounded-full border-[1px]" />
       </div>
-      <div class="">
+      <div class="bg-offwhite">
         <slot />
       </div>
     </div>

@@ -3,7 +3,7 @@ import ContactUsButton from '../components/ContactUsButton.vue';
   <body class="font-thin bg-offwhite">
     <SectionMain />
     <SectionProjects class="text-black" />
-    <SectionSlider initSectionIndex="0" isScroll="true" />
+    <SectionMultisection initSectionIndex="0" isScroll="true" />
     <SectionContacts />
   </body>
 </template>

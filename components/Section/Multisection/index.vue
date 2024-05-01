@@ -86,11 +86,11 @@
         </h4>
       </div>
 
-      <SectionSliderPbar :step="currentSectionIndex" />
+      <SectionMultisectionPbar :step="currentSectionIndex" />
     </div>
 
     <div class="w-[30%]">
-      <SectionSliderIllustrationSelector :step="currentSectionIndex" />
+      <SectionMultisectionIllustrationSelector :step="currentSectionIndex" />
     </div>
   </section>
 

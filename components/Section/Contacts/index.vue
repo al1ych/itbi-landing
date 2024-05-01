@@ -5,15 +5,15 @@
       <div
         class="relative w-[60%] h-full flex flex-col justify-center items-center"
       >
-        <h3 class="text-5xl font-bold mb-4">Связаться с нами</h3>
-        <h4 class="text-xl font-thin mb-8">
+        <h3 class="mb-4 text-5xl font-bold">Связаться с нами</h3>
+        <h4 class="mb-8 text-xl font-thin">
           В течение 2 часов мы с вами свяжемся
         </h4>
 
         <SectionContactsForm class="w-1/2" />
 
-        <div class="absolute bottom-24 w-1/2 px-1">
-          <SectionContactsFooter />
+        <div class="absolute w-1/2 px-1 bottom-24">
+          <Footer />
         </div>
       </div>
 
