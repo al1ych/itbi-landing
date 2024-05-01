@@ -1,8 +1,8 @@
 <template>
-  <!-- TODO скорость переключения -->
+  {{ perView }}
   <swiper
     :grabCursor="true"
-    :slidesPerView="5"
+    :slidesPerView="perView"
     :loop="true"
     :navigation="false"
     :modules="modules"
@@ -108,6 +108,7 @@
       Swiper,
       SwiperSlide,
     },
+    props: ["perView"],
     setup() {
       return {
         modules: [
