@@ -15,8 +15,15 @@
   })
 
   async function onSubmit(event: FormSubmitEvent<Schema>) {
-    // Do something with event.data
-    console.log(event.data)
+    console.log("sending email")
+
+    const mail = useMail()
+
+    mail.send({
+      from: "John Doe",
+      subject: "Incredible",
+      text: "This is an incredible test message",
+    })
   }
 </script>
 
@@ -40,6 +47,6 @@
       />
     </UFormGroup>
 
-    <AppButton class="w-1/2 mx-auto mt-4"> </AppButton>
+    <AppButton class="w-1/2 mx-auto mt-4" @click="onSubmit"> </AppButton>
   </UForm>
 </template>

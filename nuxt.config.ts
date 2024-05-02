@@ -16,6 +16,22 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxt/ui",
+    [
+      "nuxt-mail",
+      {
+        message: {
+          to: "back-office@it-b-i.ru",
+        },
+        smtp: {
+          host: "smtp.mail.ru",
+          port: 465,
+          auth: {
+            user: "back-office@it-b-i.ru", // Замените на ваш реальный email
+            pass: "i7NdRUCk99XvcVCrNuD6", // Пароль приложения, который вы только что создали
+          },
+        },
+      },
+    ],
   ],
 
   imports: {

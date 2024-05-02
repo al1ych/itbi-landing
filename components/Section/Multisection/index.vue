@@ -57,7 +57,7 @@
 <template>
   <!-- controls -->
   <div
-    class="absolute w-full h-[140vh] flex items-center justify-between z-30 px-12"
+    class="absolute w-full h-[140vh] hidden items-center justify-between z-30 px-12 md:flex overflow-hidden"
   >
     <img
       src="/icons/Flecha-derecha.svg"
@@ -74,14 +74,14 @@
   <!-- content -->
   <section
     id="multisection"
-    class="absolute z-20 flex items-center justify-between w-full h-[120vh] px-48 text-offwhite"
+    class="absolute z-20 flex flex-col lg:flex-row items-center justify-between w-full h-[120vh] px-12 lg:px-48 text-offwhite overflow-hidden"
   >
-    <div class="flex flex-col w-1/2 h-[33%] justify-between">
+    <div class="flex flex-col flex-1 h-[33%] justify-between">
       <div>
-        <h2 class="text-5xl font-bold">
+        <h2 class="text-2xl lg:text-5xl font-bold">
           {{ sectionMeta[currentSectionIndex].title }}
         </h2>
-        <h4 class="mt-10 text-sm font-thin">
+        <h4 class="mt-10 text-xs lg:text-sm font-thin">
           {{ sectionMeta[currentSectionIndex].description }}
         </h4>
       </div>
@@ -97,7 +97,7 @@
   <!-- background -->
   <div class="relative z-10 w-full h-full">
     <svg
-      class="left-0 mx-0 -m-10 pointer-events-none select-none"
+      class="left-0 mx-0 -m-10 overflow-hidden pointer-events-none select-none"
       viewBox="0 0 1440 1059"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
