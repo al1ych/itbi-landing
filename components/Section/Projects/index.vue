@@ -12,17 +12,21 @@
 
 <template>
   <div class="bg-offwhite">
-    <section id="projects" class="relative w-full z-10" name="projects">
+    <section id="projects" class="w-full z-10 relative -mt-6" name="projects">
       <div class="w-full flex flex-col justify-center items-center">
-        <div class="mt-48 pb-24 flex flex-col items-center">
-          <h1 class="text-5xl font-bold z-50">Проекты</h1>
+        <div
+          class="pb-24 flex flex-col items-center sm:px-12 md:px-24 lg:px-36"
+        >
+          <h1 v-if="showAll" class="text-7xl font-bold self-start z-50">
+            Проекты
+          </h1>
+          <h1 v-else class="text-5xl font-bold z-50">Проекты</h1>
 
           <div
-            class="w-full px-12 sm:px-0 flex flex-col sm:flex-row flex-wrap justify-around gap-y-20 mt-40"
+            class="w-full px-12 sm:px-0 flex flex-col sm:flex-row flex-wrap justify-center gap-y-20 gap-x-4 mt-40"
           >
             <SectionProjectsCard
               v-for="p in projectsToShow"
-              class="section px-2 lg:px-10"
               :title="p.title"
               :subtitle="p.subtitle"
               :svg="p.svg"

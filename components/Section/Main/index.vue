@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <!-- <div
+      <div
         class="flex flex-col items-center justify-center w-full mt-0 overflow-x-hidden lg:mt-24"
       >
         <h1 class="z-20 text-xl">Технологии</h1>
@@ -46,7 +46,7 @@
         <div class="hidden w-[120vw] mt-8 xl:block">
           <TechCarousel :perView="5" />
         </div>
-      </div> -->
+      </div>
     </div>
 
     <img
