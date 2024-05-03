@@ -3,6 +3,6 @@
     <SectionMain />
     <SectionProjects class="text-black" />
     <SectionMultisection initSectionIndex="0" isScroll="true" />
-    <!-- <SectionContacts /> -->
+    <SectionContacts />
   </body>
 </template>

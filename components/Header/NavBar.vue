@@ -21,10 +21,35 @@
       to: "/#contacts",
     },
   ]
+
+  defineProps(["isVertical"])
 </script>
 
 <template>
+  <UVerticalNavigation
+    v-if="isVertical"
+    :links="links"
+    class="w-full"
+    :ui="{
+      strategy: 'override',
+      active: 'text-white bg-transparent -mt-1',
+      inactive: 'text-white bg-transparent -mt-1',
+      size: 'text-md',
+      padding: 'px-0 py-5',
+    }"
+  >
+    <template #default="{ link }">
+      <span
+        class="group-hover:text-primary relative font-light px-1 inline-flex justify-between w-full"
+      >
+        <p>{{ link.label }}</p>
+        <img src="/icons/Flecha-derecha.svg" />
+      </span>
+    </template>
+  </UVerticalNavigation>
+
   <UHorizontalNavigation
+    v-else
     :links="links"
     class="h-10 bg-white rounded-full px-4 w-fit border-[1px] border-itbtPurple-700"
     :ui="{

@@ -76,7 +76,7 @@
     id="multisection"
     class="absolute z-20 flex flex-col lg:flex-row items-center justify-between w-full h-[120vh] px-12 lg:px-48 text-offwhite overflow-hidden"
   >
-    <div class="flex flex-col flex-1 h-[33%] justify-between">
+    <div class="flex flex-col h-[45%] w-[55%] justify-between">
       <div>
         <h2 class="text-2xl lg:text-5xl font-bold">
           {{ sectionMeta[currentSectionIndex].title }}
@@ -89,8 +89,10 @@
       <SectionMultisectionPbar :step="currentSectionIndex" />
     </div>
 
-    <div class="w-[30%]">
+    <div class="flex flex-col h-[45%] w-[55%] lg:w-[30%] justify-between">
       <SectionMultisectionIllustrationSelector :step="currentSectionIndex" />
+
+      <SectionMultisectionPbar :step="currentSectionIndex" />
     </div>
   </section>
 
