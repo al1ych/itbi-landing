@@ -74,9 +74,9 @@
   <!-- content -->
   <section
     id="multisection"
-    class="absolute z-20 flex flex-col lg:flex-row items-center justify-between w-full h-[120vh] px-12 lg:px-48 text-offwhite overflow-hidden"
+    class="absolute z-20 flex flex-col lg:flex-row items-center justify-between w-full mt-48 px-12 lg:px-48 text-offwhite overflow-hidden"
   >
-    <div class="flex flex-col h-[45%] w-[55%] justify-between">
+    <div class="flex flex-col w-[55%] justify-between gap-y-24">
       <div>
         <h2 class="text-2xl lg:text-5xl font-bold">
           {{ sectionMeta[currentSectionIndex].title }}
