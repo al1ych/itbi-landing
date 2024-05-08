@@ -1,6 +1,6 @@
 <script lang="js" setup>
   // props
-  defineProps(['variant', 'text', 'to', 'onClick']);
+  defineProps(['variant', 'text', 'to', 'onClick', 'disabled']);
 </script>
 
 <template>
@@ -9,6 +9,7 @@
     class="transition h-10 px-8 text-white hover:bg-white hover:text-black hover:border-[1px] hover:border-black group flex items-center justify-center bg-itbtPurple-700"
     :to="to || '/#contacts'"
     @click="onClick"
+    :disabled="disabled || false"
   >
     <span class="font-light">{{ text || "Связаться" }}</span>
     <svg

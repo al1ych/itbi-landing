@@ -24,5 +24,7 @@ import ContactUsButton from '../components/ContactUsButton.vue';
 
       <SectionContacts class="mt-48 absolute" />
     </div>
+
+    <UNotifications />
   </body>
 </template>

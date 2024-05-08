@@ -12,7 +12,9 @@
   "dependencies": {
     "@nuxt/ui": "^2.15.2",
     "@pinia/nuxt": "^0.5.1",
+    "nodemailer": "^6.9.13",
     "nuxt": "^3.11.2",
+    "nuxt-hcaptcha-module": "^0.0.5",
     "nuxt-mail": "^5.0.1",
     "swiper": "^11.1.1",
     "vue": "^3.4.21",

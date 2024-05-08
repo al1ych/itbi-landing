@@ -20,19 +20,27 @@ export default defineNuxtConfig({
       "nuxt-mail",
       {
         message: {
-          to: "back-office@it-b-i.ru",
+          to: process.env.SMTP_RECIPIENT || "timur.aladdinych@gmail.com",
         },
         smtp: {
           host: "smtp.mail.ru",
           port: 465,
           auth: {
-            user: "back-office@it-b-i.ru", // Замените на ваш реальный email
-            pass: "i7NdRUCk99XvcVCrNuD6", // Пароль приложения, который вы только что создали
+            user: process.env.SMTP_USER || "semyon.kotovsky@mail.ru",
+            pass: process.env.STMP_PASS || "td01PxcyqpVbfSvu5qek",
           },
+          secure: true,
         },
       },
     ],
+    "nuxt-hcaptcha-module",
   ],
+
+  //@ts-ignore
+  hcaptcha: {
+    siteKey: process.env.HCAPTCHA_SITEKEY || "",
+    secretKey: process.env.HCAPTCHA_SECRET || "",
+  },
 
   imports: {
     dirs: ["stores"],

@@ -4,5 +4,7 @@
     <SectionProjects class="text-black" />
     <SectionMultisection initSectionIndex="0" isScroll="true" />
     <SectionContacts />
+
+    <UNotifications />
   </body>
 </template>
