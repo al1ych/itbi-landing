@@ -24,6 +24,12 @@
 
   const currentSectionIndex = ref(props.initSectionIndex)
 
+  const dynamicBackground = computed(() => {
+    const color = sectionMeta[currentSectionIndex.value].background
+    // console.log("New dynamic background:", color, `bg-[${color}]`)
+    return color
+  })
+
   function decCurrentSectionIndex() {
     currentSectionIndex.value =
       (currentSectionIndex.value + sectionMeta.length - 1) % sectionMeta.length
@@ -55,53 +61,71 @@
 </script>
 
 <template>
-  <!-- controls -->
-  <div
-    class="absolute w-full h-[140vh] hidden items-center justify-between z-30 px-12 md:flex overflow-hidden"
-  >
-    <img
-      src="/icons/Flecha-derecha.svg"
-      class="rotate-180 h-12 cursor-pointer hover:animate-pulse"
-      @click="handleLeft"
-    />
-    <img
-      src="/icons/Flecha-derecha.svg"
-      class="h-12 cursor-pointer hover:animate-pulse"
-      @click="handleRight"
-    />
-  </div>
-
-  <!-- content -->
-  <section
-    id="multisection"
-    class="absolute z-20 flex flex-col lg:flex-row items-center justify-between w-full mt-48 px-12 lg:px-48 text-offwhite overflow-hidden"
-  >
-    <div class="flex flex-col w-[55%] justify-between gap-y-24">
-      <div>
-        <h2 class="text-2xl lg:text-5xl font-bold">
-          {{ sectionMeta[currentSectionIndex].title }}
-        </h2>
-        <h4 class="mt-10 text-xs lg:text-sm font-thin">
-          {{ sectionMeta[currentSectionIndex].description }}
-        </h4>
-      </div>
-
-      <SectionMultisectionPbar
-        :step="currentSectionIndex"
-        class="hidden lg:block"
+  <div class="h-screen">
+    <!-- controls -->
+    <div
+      class="absolute w-full h-full hidden items-center justify-between z-30 px-12 md:flex overflow-hidden"
+    >
+      <img
+        src="/icons/Flecha-derecha.svg"
+        class="rotate-180 h-12 cursor-pointer hover:animate-pulse"
+        @click="handleLeft"
+      />
+      <img
+        src="/icons/Flecha-derecha.svg"
+        class="h-12 cursor-pointer hover:animate-pulse"
+        @click="handleRight"
       />
     </div>
 
-    <div class="flex flex-col h-[45%] w-[55%] lg:w-[30%] justify-between">
-      <SectionMultisectionIllustrationSelector :step="currentSectionIndex" />
+    <!-- content -->
+    <!-- alt+z for word wrap -->
+    <section
+      id="multisection"
+      class="absolute z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full h-full px-6 md:px-48 lg:px-48 gap-y-24 text-offwhite overflow-hidden transition duration-700"
+      :style="{
+        'background-color': dynamicBackground,
+      }"
+    >
+      <div
+        class="flex flex-col lg:w-[55%] justify-between gap-y-16 flex-auto lg:flex-initial"
+      >
+        <div class="flex-grow mt-24">
+          <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold">
+            {{ sectionMeta[currentSectionIndex].title }}
+          </h2>
+          <h4
+            class="mt-10 text-sm md:text-lg lg:text-sm text-gray-200 leading-relaxed font-thin"
+          >
+            {{ sectionMeta[currentSectionIndex].description }}
+          </h4>
+        </div>
 
-      <SectionMultisectionPbar :step="currentSectionIndex" class="lg:hidden" />
-    </div>
-  </section>
+        <SectionMultisectionPbar
+          :step="currentSectionIndex"
+          class="hidden lg:block flex-1"
+        />
+      </div>
+
+      <div
+        class="flex flex-col lg:h-[45%] lg:w-[30%] justify-center items-center gap-y-20 lg:mt-16"
+      >
+        <SectionMultisectionIllustrationSelector
+          :step="currentSectionIndex"
+          class="px-20 lg:px-0"
+        />
+
+        <SectionMultisectionPbar
+          :step="currentSectionIndex"
+          class="lg:hidden translate-x-4 pb-24"
+        />
+      </div>
+    </section>
+  </div>
 
   <!-- background -->
   <div class="relative z-10 w-full h-full">
-    <svg
+    <!-- <svg
       class="left-0 mx-0 -m-10 overflow-hidden pointer-events-none select-none"
       viewBox="0 0 1440 1059"
       fill="none"
@@ -131,6 +155,6 @@
         :fill="sectionMeta[currentSectionIndex].background"
         class="transition duration-700"
       />
-    </svg>
+    </svg> -->
   </div>
 </template>

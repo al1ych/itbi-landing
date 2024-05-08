@@ -1,10 +1,10 @@
 <template>
-  <body class="font-thin bg-emerald-800">
-    <!-- <body class="font-thin bg-offwhite"> -->
-    <!-- <SectionMain /> -->
-    <!-- <SectionProjects class="text-black" /> -->
+  <!-- <body class="font-thin bg-emerald-800"> -->
+  <body class="font-thin bg-offwhite">
+    <SectionMain />
+    <SectionProjects class="text-black" />
     <SectionMultisection initSectionIndex="0" isScroll="true" />
-    <!-- <SectionContacts /> -->
+    <SectionContacts />
 
     <UNotifications />
   </body>
