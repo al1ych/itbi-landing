@@ -86,13 +86,16 @@
         </h4>
       </div>
 
-      <SectionMultisectionPbar :step="currentSectionIndex" />
+      <SectionMultisectionPbar
+        :step="currentSectionIndex"
+        class="hidden lg:block"
+      />
     </div>
 
     <div class="flex flex-col h-[45%] w-[55%] lg:w-[30%] justify-between">
       <SectionMultisectionIllustrationSelector :step="currentSectionIndex" />
 
-      <SectionMultisectionPbar :step="currentSectionIndex" />
+      <SectionMultisectionPbar :step="currentSectionIndex" class="lg:hidden" />
     </div>
   </section>
 
