@@ -11,24 +11,19 @@
 </script>
 
 <template>
-  <!-- TODO: футер вынести в Апп!!! -->
-  <footer class="flex items-center justify-between w-full h-full">
+  <footer
+    class="flex md:items-center md:justify-between w-full h-full flex-col md:flex-row text-white md:text-black justify-center items-start gap-y-4"
+  >
     <div class="flex flex-col gap-2">
       <p class="font-normal">E-mail</p>
-      <a
-        :href="emailTo"
-        class="text-sm underline text-gray-500 hover:text-primary"
-      >
+      <a :href="emailTo" class="text-sm md:text-gray-500 hover:text-primary">
         {{ email }}
       </a>
     </div>
 
     <div class="flex flex-col gap-2">
       <p class="font-normal">Телефон</p>
-      <a
-        :href="telTo"
-        class="text-sm underline text-gray-500 hover:text-primary"
-      >
+      <a :href="telTo" class="text-sm md:text-gray-500 hover:text-primary">
         {{ telFormatted }}
       </a>
     </div>

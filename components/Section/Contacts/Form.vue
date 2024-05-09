@@ -122,7 +122,7 @@
     </UFormGroup>
 
     <div
-      class="mt-4 transition-all flex gap-2 max-h-0 opacity-0"
+      class="mt-4 transition-all flex gap-2 max-h-0 opacity-0 flex-col lg:flex-row"
       :class="{
         'max-h-96': isFilledOut,
         'opacity-100': isFilledOut,
@@ -140,6 +140,7 @@
       <NuxtHCaptcha v-if="isFilledOut && !isHuman" v-model="state.captcha" />
     </div>
 
-    <AppButton class="w-1/2 mx-auto mt-4" @click="onSubmit"> </AppButton>
+    <AppButton class="min-w-1/2 lg:w-[60%] mx-auto mt-4" @click="onSubmit">
+    </AppButton>
   </UForm>
 </template>
