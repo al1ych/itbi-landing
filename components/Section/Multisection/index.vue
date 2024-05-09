@@ -131,7 +131,7 @@
               {{ sectionMeta[currentSectionIndex].title }}
             </h2>
             <h4
-              class="mt-10 text-sm md:text-lg lg:text-sm text-gray-100 leading-relaxed font-extralight pr-12"
+              class="mt-10 text-md md:text-lg lg:text-sm text-gray-100 leading-relaxed font-extralight pr-12"
             >
               {{ sectionMeta[currentSectionIndex].description }}
             </h4>
@@ -144,17 +144,17 @@
         </div>
 
         <div
-          class="flex-grow flex flex-col lg:h-[45%] lg:w-[30%] justify-center items-center gap-y-20 md:gap-y-20 lg:mt-16"
+          class="flex-grow flex flex-col lg:h-[45%] lg:w-[30%] justify-center items-center gap-y-20 md:gap-y-20 lg:mt-40 pb-24"
         >
           <SectionMultisectionIllustrationSelector
             :step="currentSectionIndex"
-            class="px-20 lg:px-0"
+            class="max-h-56 lg:max-h-[400px] lg:px-0"
           />
 
-          <SectionMultisectionPbar
+          <!-- <SectionMultisectionPbar
             :step="currentSectionIndex"
             class="lg:hidden translate-x-4 pb-24"
-          />
+          /> -->
         </div>
       </section>
     </div>
