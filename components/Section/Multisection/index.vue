@@ -60,100 +60,103 @@
 </script>
 
 <template>
-  <div class="h-screen">
-    <!-- controls -->
-    <div
-      class="absolute w-full h-full hidden items-center justify-between z-30 px-12 md:flex overflow-hidden"
-    >
-      <img
-        src="/icons/Flecha-derecha.svg"
-        class="rotate-180 h-12 cursor-pointer hover:animate-pulse"
-        @click="handleLeft"
-      />
-      <img
-        src="/icons/Flecha-derecha.svg"
-        class="h-12 cursor-pointer hover:animate-pulse"
-        @click="handleRight"
-      />
-    </div>
+  <div class="relative">
+    <div class="h-screen bg-offwhite relative flex flex-col justify-center">
+      <!-- top ellipse -->
+      <div class="absolute top-0 w-full">
+        <svg
+          viewBox="0 0 1440 605"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse
+            cx="802.854"
+            cy="302.114"
+            rx="906.203"
+            ry="291.5"
+            transform="rotate(5.25071 802.854 302.114)"
+            :fill="dynamicBackground"
+            class="transition duration-700"
+          />
+        </svg>
+      </div>
 
-    <!-- content -->
-    <!-- alt+z for word wrap -->
-    <section
-      id="multisection"
-      class="z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full h-full px-6 md:px-48 lg:px-48 text-offwhite overflow-hidden transition duration-700"
-      :style="{
-        'background-color': dynamicBackground,
-      }"
-    >
+      <!-- bottom ellipse -->
+      <div class="absolute bottom-0 left-0 w-full">
+        <svg
+          viewBox="0 0 1440 661"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse
+            cx="724"
+            cy="330.5"
+            rx="1076"
+            ry="330.5"
+            :fill="dynamicBackground"
+            class="transition duration-700"
+          />
+        </svg>
+      </div>
+
+      <!-- controls -->
       <div
-        class="flex flex-col lg:w-[55%] justify-between gap-y-16 flex-auto lg:flex-initial"
+        class="absolute w-full h-full hidden items-center justify-between z-30 px-12 md:flex"
       >
-        <div class="flex-grow mt-24">
-          <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold">
-            {{ sectionMeta[currentSectionIndex].title }}
-          </h2>
-          <h4
-            class="mt-10 text-sm md:text-lg lg:text-sm text-gray-200 leading-relaxed font-thin pr-12"
-          >
-            {{ sectionMeta[currentSectionIndex].description }}
-          </h4>
+        <img
+          src="/icons/Flecha-derecha.svg"
+          class="rotate-180 h-12 cursor-pointer hover:animate-pulse"
+          @click="handleLeft"
+        />
+        <img
+          src="/icons/Flecha-derecha.svg"
+          class="h-12 cursor-pointer hover:animate-pulse"
+          @click="handleRight"
+        />
+      </div>
+
+      <!-- content -->
+      <section
+        id="multisection"
+        class="relative flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full px-6 md:px-48 lg:px-48 text-offwhite transition duration-700 md:gap-16 gap-16 h-[80%] md-[60%] lg:h-[65%]"
+        :style="{
+          'background-color': dynamicBackground,
+        }"
+      >
+        <div
+          class="flex flex-col lg:w-[55%] justify-between gap-y-16 flex-auto lg:flex-initial"
+        >
+          <div class="flex-grow mt-24">
+            <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold">
+              {{ sectionMeta[currentSectionIndex].title }}
+            </h2>
+            <h4
+              class="mt-10 text-sm md:text-lg lg:text-sm text-gray-200 leading-relaxed font-thin pr-12"
+            >
+              {{ sectionMeta[currentSectionIndex].description }}
+            </h4>
+          </div>
+
+          <SectionMultisectionPbar
+            :step="currentSectionIndex"
+            class="hidden lg:block flex-1"
+          />
         </div>
 
-        <SectionMultisectionPbar
-          :step="currentSectionIndex"
-          class="hidden lg:block flex-1"
-        />
-      </div>
+        <div
+          class="flex-grow flex flex-col lg:h-[45%] lg:w-[30%] justify-center items-center gap-y-20 md:gap-y-20 lg:mt-16"
+        >
+          <SectionMultisectionIllustrationSelector
+            :step="currentSectionIndex"
+            class="px-20 lg:px-0"
+          />
 
-      <div
-        class="flex-grow flex flex-col lg:h-[45%] lg:w-[30%] justify-center items-center gap-y-20 lg:mt-16"
-      >
-        <SectionMultisectionIllustrationSelector
-          :step="currentSectionIndex"
-          class="px-20 lg:px-0"
-        />
-
-        <SectionMultisectionPbar
-          :step="currentSectionIndex"
-          class="lg:hidden translate-x-4 pb-24"
-        />
-      </div>
-    </section>
+          <SectionMultisectionPbar
+            :step="currentSectionIndex"
+            class="lg:hidden translate-x-4 pb-24"
+          />
+        </div>
+      </section>
+    </div>
   </div>
-
-  <!-- background -->
-  <!-- <div class="relative z-10 w-full h-full"> -->
-  <!-- <svg
-      class="left-0 mx-0 -m-10 overflow-hidden pointer-events-none select-none"
-      viewBox="0 0 1440 1059"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <ellipse
-        cx="802.854"
-        cy="374.114"
-        rx="906.203"
-        ry="291.5"
-        transform="rotate(5.25071 802.854 374.114)"
-        :fill="sectionMeta[currentSectionIndex].background"
-        class="transition duration-700"
-      />
-      <ellipse
-        cx="724"
-        cy="728.5"
-        rx="1076"
-        ry="330.5"
-        :fill="sectionMeta[currentSectionIndex].background"
-        class="transition duration-700"
-      />
-      <rect
-        y="228"
-        width="1451"
-        height="728"
-        :fill="sectionMeta[currentSectionIndex].background"
-        class="transition duration-700"
-      />
-    </svg> -->
-  <!-- </div> -->
 </template>
