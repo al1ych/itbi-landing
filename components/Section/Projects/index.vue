@@ -17,7 +17,7 @@
         <div
           class="pb-24 flex flex-col items-center sm:px-12 md:px-24 lg:px-36"
         >
-          <h1 v-if="showAll" class="text-7xl font-bold self-start z-50">
+          <h1 v-if="showAll" class="text-7xl font-bold lg:self-start z-50">
             Проекты
           </h1>
           <h1 v-else class="text-5xl font-bold z-50">Проекты</h1>
