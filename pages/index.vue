@@ -11,7 +11,7 @@
       class="relative z-10"
     />
 
-    <SectionContacts class="-mt-36" />
+    <SectionContacts class="lg:-mt-36" />
 
     <div class="bg-black h-[35vh] w-full px-6 lg:hidden">
       <Footer />
