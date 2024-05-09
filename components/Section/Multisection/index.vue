@@ -26,7 +26,6 @@
 
   const dynamicBackground = computed(() => {
     const color = sectionMeta[currentSectionIndex.value].background
-    // console.log("New dynamic background:", color, `bg-[${color}]`)
     return color
   })
 
@@ -82,7 +81,7 @@
     <!-- alt+z for word wrap -->
     <section
       id="multisection"
-      class="absolute z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full h-full px-6 md:px-48 lg:px-48 gap-y-24 text-offwhite overflow-hidden transition duration-700"
+      class="z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full h-full px-6 md:px-48 lg:px-48 gap-y-24 text-offwhite overflow-hidden transition duration-700"
       :style="{
         'background-color': dynamicBackground,
       }"
@@ -124,8 +123,8 @@
   </div>
 
   <!-- background -->
-  <div class="relative z-10 w-full h-full">
-    <!-- <svg
+  <!-- <div class="relative z-10 w-full h-full"> -->
+  <!-- <svg
       class="left-0 mx-0 -m-10 overflow-hidden pointer-events-none select-none"
       viewBox="0 0 1440 1059"
       fill="none"
@@ -156,5 +155,5 @@
         class="transition duration-700"
       />
     </svg> -->
-  </div>
+  <!-- </div> -->
 </template>
