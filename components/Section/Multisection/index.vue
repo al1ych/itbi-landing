@@ -61,7 +61,7 @@
 
 <template>
   <div class="relative">
-    <div class="h-screen bg-offwhite relative flex flex-col justify-center">
+    <div class="h-screen bg-transparent relative flex flex-col justify-center">
       <!-- top ellipse -->
       <div class="absolute top-0 w-full">
         <svg
