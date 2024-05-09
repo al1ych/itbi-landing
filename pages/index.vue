@@ -1,19 +1,13 @@
 <template>
   <!-- <body class="font-thin bg-emerald-800"> -->
   <body class="font-thin bg-offwhite">
-    <div class="">
-      <SectionMain />
-    </div>
+    <SectionMain />
 
-    <div class="">
-      <SectionProjects class="text-black" />
-    </div>
+    <SectionProjects class="text-black" />
 
     <SectionMultisection initSectionIndex="0" isScroll="true" />
 
-    <div class="">
-      <SectionContacts />
-    </div>
+    <SectionContacts />
 
     <div class="bg-black h-[35vh] w-full px-6 lg:hidden">
       <Footer />

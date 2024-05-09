@@ -81,7 +81,7 @@
     <!-- alt+z for word wrap -->
     <section
       id="multisection"
-      class="z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full h-full px-6 md:px-48 lg:px-48 gap-y-24 text-offwhite overflow-hidden transition duration-700"
+      class="z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full h-full px-6 md:px-48 lg:px-48 text-offwhite overflow-hidden transition duration-700"
       :style="{
         'background-color': dynamicBackground,
       }"
@@ -107,7 +107,7 @@
       </div>
 
       <div
-        class="flex flex-col lg:h-[45%] lg:w-[30%] justify-center items-center gap-y-20 lg:mt-16"
+        class="flex-grow flex flex-col lg:h-[45%] lg:w-[30%] justify-center items-center gap-y-20 lg:mt-16"
       >
         <SectionMultisectionIllustrationSelector
           :step="currentSectionIndex"
