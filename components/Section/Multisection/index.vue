@@ -131,7 +131,7 @@
               {{ sectionMeta[currentSectionIndex].title }}
             </h2>
             <h4
-              class="mt-10 text-sm md:text-lg lg:text-sm text-gray-200 leading-relaxed font-thin pr-12"
+              class="mt-10 text-md md:text-lg lg:text-sm text-gray-200 leading-relaxed font-thin pr-12"
             >
               {{ sectionMeta[currentSectionIndex].description }}
             </h4>
