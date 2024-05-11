@@ -3,7 +3,7 @@
   <body class="font-thin bg-offwhite">
     <SectionMain />
 
-    <SectionProjects class="text-black lg:-mt-32" />
+    <SectionProjects class="text-black mt-16 sm:-mt-8 md:-mt-24 lg:-mt-32" />
 
     <SectionMultisection
       initSectionIndex="0"

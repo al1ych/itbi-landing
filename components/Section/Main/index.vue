@@ -8,13 +8,13 @@
       >
         <div class="flex-1 px-auto md:px-0">
           <h1
-            class="w-full text-4xl font-medium text-center text-white md:text-5xl lg:text-left md:font-bold 2xl:text-7xl"
+            class="w-full text-4xl font-medium text-center text-white md:text-5xl lg:text-left md:font-bold 2xl:text-7xl tracking-wide"
           >
             IT решения на <br />
             1С и Битриксе
           </h1>
           <h2
-            class="text-[#EEE6FF] lg:text-left text-center text-md md:text-xl font-thin mt-4"
+            class="text-[#EEE6FF] lg:text-left text-center text-md md:text-xl font-thin mt-4 tracking-wide"
           >
             Мы специализируемся на разработке и внедрении<br />
             систем ERP, CRM, ECM, а также биллинговых систем для<br />
@@ -39,11 +39,11 @@
       <div
         class="flex flex-col items-center justify-center w-full mt-0 overflow-x-hidden lg:mt-24"
       >
-        <h1 class="z-20 text-xl">Технологии</h1>
-        <div class="w-[200vw] md:w-[120vw] mt-8 xl:hidden">
-          <TechCarousel class="mt-8" :perView="3" />
+        <h1 class="z-20 text-xl mt-8 lg:mt-16 tracking-wider">Технологии</h1>
+        <div class="w-[250vw] sm:w-[200vw] md:w-[120vw] xl:hidden">
+          <TechCarousel :perView="3" />
         </div>
-        <div class="hidden w-[120vw] mt-8 xl:block">
+        <div class="hidden w-[120vw] xl:block">
           <TechCarousel :perView="5" />
         </div>
       </div>
