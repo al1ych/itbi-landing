@@ -3,7 +3,7 @@
   <body class="font-thin bg-offwhite">
     <SectionMain />
 
-    <SectionProjects class="text-black" />
+    <SectionProjects class="text-black lg:-mt-32" />
 
     <SectionMultisection
       initSectionIndex="0"
@@ -13,7 +13,7 @@
 
     <SectionContacts class="lg:-mt-36" />
 
-    <div class="bg-black h-[35vh] w-full px-6 lg:hidden">
+    <div class="bg-black h-[40vh] w-full px-6 lg:hidden">
       <Footer />
     </div>
 

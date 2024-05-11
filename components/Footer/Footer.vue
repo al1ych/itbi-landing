@@ -8,24 +8,43 @@
 
   const waTo = `https://wa.me/${tel}`
   const tgTo = `https://t.me/${tel}`
+
+  defineProps(["forceTextWhite"])
 </script>
 
 <template>
   <footer
-    class="flex lg:items-center lg:justify-between w-full h-full flex-col lg:flex-row text-white lg:text-black justify-center items-start gap-y-4"
+    class="flex lg:items-center lg:justify-between w-full h-full flex-col lg:flex-row text-white lg:text-black justify-center items-start gap-y-6"
+    :class="{
+      'lg:text-white': forceTextWhite,
+    }"
   >
-    <div class="flex flex-col gap-2">
-      <p class="font-normal">E-mail</p>
-      <a :href="emailTo" class="text-sm lg:text-gray-500 hover:text-primary">
-        {{ email }}
-      </a>
-    </div>
+    <div class="flex flex-col lg:flex-row gap-6">
+      <div class="flex flex-col gap-2">
+        <p class="font-normal">E-mail</p>
+        <a
+          :href="emailTo"
+          class="text-sm lg:text-gray-500 hover:text-primary"
+          :class="{
+            'lg:text-white': forceTextWhite,
+          }"
+        >
+          {{ email }}
+        </a>
+      </div>
 
-    <div class="flex flex-col gap-2">
-      <p class="font-normal">Телефон</p>
-      <a :href="telTo" class="text-sm lg:text-gray-500 hover:text-primary">
-        {{ telFormatted }}
-      </a>
+      <div class="flex flex-col gap-2">
+        <p class="font-normal">Телефон</p>
+        <a
+          :href="telTo"
+          class="text-sm lg:text-gray-500 hover:text-primary"
+          :class="{
+            'lg:text-white': forceTextWhite,
+          }"
+        >
+          {{ telFormatted }}
+        </a>
+      </div>
     </div>
 
     <div class="flex gap-4">
