@@ -8,5 +8,9 @@ export default defineAppConfig({
       rounded: "rounded-xl",
       color: "white",
     },
+
+    notifications: {
+      position: "bottom-0 left-0",
+    },
   },
 })
