@@ -50,6 +50,7 @@
     <template #default="{ link }">
       <span
         class="group-hover:text-primary relative font-light px-1 inline-flex justify-between w-full"
+        @click="() => handleMultisection(link.multisectionIndex)"
       >
         <p>{{ link.label }}</p>
         <img src="/icons/Flecha-derecha.svg" />
