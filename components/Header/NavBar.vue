@@ -7,14 +7,17 @@
     {
       label: "Специализация",
       to: "/#multisection",
+      multisectionIndex: 0,
     },
     {
       label: "О компании",
       to: "/#multisection",
+      multisectionIndex: 1,
     },
     {
       label: "История",
       to: "/#multisection",
+      multisectionIndex: 2,
     },
     {
       label: "Контакты",
@@ -23,6 +26,12 @@
   ]
 
   defineProps(["isVertical"])
+
+  const multisectionStore = useMultisectionStore()
+  const { currentSectionIndex } = storeToRefs(multisectionStore)
+  function handleMultisection(multisectionIndex: number) {
+    currentSectionIndex.value = multisectionIndex
+  }
 </script>
 
 <template>
@@ -59,7 +68,10 @@
     }"
   >
     <template #default="{ link }">
-      <span class="group-hover:text-primary relative font-light px-1">
+      <span
+        class="group-hover:text-primary relative font-light px-1"
+        @click="() => handleMultisection(link.multisectionIndex)"
+      >
         {{ link.label }}
       </span>
     </template>

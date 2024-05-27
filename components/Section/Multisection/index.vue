@@ -1,4 +1,6 @@
 <script setup>
+  import { useMultisectionStore } from "~/stores/multisection"
+
   const props = defineProps(["initSectionIndex", "isScroll"])
 
   const sectionMeta = [
@@ -22,7 +24,9 @@
     },
   ]
 
-  const currentSectionIndex = ref(props.initSectionIndex)
+  const store = useMultisectionStore()
+  const { currentSectionIndex } = storeToRefs(store)
+  // const { swipeLeft, swipeRight } = store
 
   const dynamicBackground = computed(() => {
     const color = sectionMeta[currentSectionIndex.value].background
