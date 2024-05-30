@@ -29,8 +29,8 @@
 
   const multisectionStore = useMultisectionStore()
   const { currentSectionIndex } = storeToRefs(multisectionStore)
-  function handleMultisection(multisectionIndex: number) {
-    currentSectionIndex.value = multisectionIndex
+  function handleMultisection(multisectionIndex: number | undefined) {
+    currentSectionIndex.value = multisectionIndex ?? currentSectionIndex.value
   }
 </script>
 
