@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <NuxtLink :to="link">
+  <a :href="link">
     <div
-      class="w-full sm:w-[160px] aspect-[3/4] md:w-[200px] lg:w-[260px] bg-[#F8F5FF] flex flex-col justify-between cursor-pointer rounded-2xl"
+      class="w-full sm:w-[160px] aspect-[3/4] md:w-[200px] lg:w-[260px] bg-[#F8F5FF] flex flex-col cursor-pointer rounded-2xl"
     >
       <img :src="svg" class="-mt-24" />
       <div class="px-8 sm:px-3 lg:px-8 mb-12">
@@ -41,5 +41,5 @@
         </h4>
       </div>
     </div>
-  </NuxtLink>
+  </a>
 </template>

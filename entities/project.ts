@@ -5,4 +5,6 @@ export interface ProjectEntity {
   svgDetail: string
   link: string
   techStack?: string[]
+  description?: string[]
+  dates?: string[]
 }
