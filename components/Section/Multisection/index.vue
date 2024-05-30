@@ -29,7 +29,7 @@
   // const { swipeLeft, swipeRight } = store
 
   const dynamicBackground = computed(() => {
-    const color = sectionMeta[currentSectionIndex.value].background
+    const color = sectionMeta[currentSectionIndex.value]?.background ?? ""
     return color
   })
 
