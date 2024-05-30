@@ -132,12 +132,12 @@
         >
           <div class="flex-grow mt-24">
             <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold">
-              {{ sectionMeta[currentSectionIndex].title }}
+              {{ sectionMeta[currentSectionIndex]?.title }}
             </h2>
             <h4
               class="mt-10 text-md md:text-lg lg:text-sm text-gray-100 leading-relaxed font-extralight pr-12"
             >
-              {{ sectionMeta[currentSectionIndex].description }}
+              {{ sectionMeta[currentSectionIndex]?.description }}
             </h4>
           </div>
 
